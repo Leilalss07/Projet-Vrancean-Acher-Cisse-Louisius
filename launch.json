@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Lancer Serveur Python",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/app.py", // Remplacez par le nom de votre fichier Python
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Lancer l'App JavaScript",
+            "type": "node", // Ou "chrome" selon votre config
+            "request": "launch",
+            "program": "${workspaceFolder}/server.js" // Si vous utilisez un serveur JS, sinon utilisez vos commandes habituelles
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Tout lancer en même temps",
+            "configurations": ["Lancer Serveur Python", "Lancer l'App JavaScript"]
+        }
+    ]
+}
